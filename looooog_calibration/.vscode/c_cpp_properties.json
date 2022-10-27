@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/devel/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/src/Universal_Robots_ROS_Driver/controller_stopper/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/src/franka_ros/franka_control/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/src/franka_ros/franka_example_controllers/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/src/franka_ros/franka_gazebo/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/src/franka_ros/franka_gripper/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/src/franka_ros/franka_hw/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/src/franka_ros_interface/franka_interface/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/src/franka_ros_interface/franka_ros_controllers/include/**",
+        "/home/elevenjiang/PointClound_ws/src/pointclound/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/src/robot_control/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/src/fmauch_universal_robot/ur_kinematics/include/**",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/src/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

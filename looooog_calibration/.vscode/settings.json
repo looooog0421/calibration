@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/devel/lib/python2.7/dist-packages",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/python_ws/devel/lib/python2.7/dist-packages",
+        "/home/elevenjiang/Documents/Project/ObjectSynthesis/code/real-robot/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

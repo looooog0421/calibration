@@ -1,0 +1,4 @@
+此文件夹的三个程序分别用于检测机械臂标定、相机标定和综合标定的结果。
+check_world_camera选择一个点修改point变量后直接运行程序即可。
+check_world_base则需要使用类似标定时的步骤，机械臂靠近目标点，输入s#，done完之后ctrl+c终止程序。
+check_base_camera则直接使用check_world_base生成的.npy数据进行检测。
