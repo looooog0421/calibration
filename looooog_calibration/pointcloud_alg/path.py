@@ -1,7 +1,6 @@
-import sys
+import cv2 as cv
+import numpy as np
 
-paths=sys.path
- 
-for path_m in paths:
-    if "python" in path_m:
-        print("python path",path_m)
+img = cv.imread("color_image.png", flags=0)
+cv.imshow("", img)
+cv.waitKey(0)

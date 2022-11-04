@@ -24,7 +24,10 @@ print(max(labels))
 # print("point cloud has {max_label + 1} clusters")
 # 可视化
 colors = np.random.randint(255, size=(max_label, 3))/255.
+print(colors)
 colors = colors[labels]
+print(colors.shape) 
+print(labels.shape)
 pcd.colors = o3d.utility.Vector3dVector(colors[:, :3])
 # o3d.visualization.draw_geometries([pcd],
 #                                   zoom=0.455,
