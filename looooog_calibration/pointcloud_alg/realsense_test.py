@@ -18,6 +18,36 @@ config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 # #pipeline为程序与摄像头交互的一个通讯模型,可以理解在对realsense操作时的一个必要操作(初始化)
 pipeline.start(config) 
  
+def vibrance(img, amount):
+    """
+    this function is an approximated implementation for vibrance filter by Photoshop that increases the saturation of
+    an image in a way that the increasing amount for the low saturated pixels is more than the increasing amount for
+    pixels that are already saturated
+    Parameters:
+        img (ndarray): input image in HSV color space
+        amount (int): increasing vibrance amount
+    Returns:
+         image in HSV color space after applying vibrance filter
+    """
+    amount = min(amount, 100)
+    sat_increase = ((255 - img[:, :, 1]) / 255 * amount).astype(np.uint8)
+    img[:, :, 1] += sat_increase
+    return img
+
+def brightenShadows(img, amount):
+    """
+    this function increases the brightness of the dark pixels of an image
+    Parameters:
+        img (ndarray): input image in HSV color space
+        amount (int): increasing brightness amount
+    Returns:
+         image in HSV color space after applying brightness filter
+    """
+    amount = min(amount, 100)
+    val_inc = ((255 - img[:, :, 2]) / 255 * amount).astype(np.uint8)
+    img[:, :, 2] += val_inc
+    return img
+
 # try:
 while True:
     # Wait for a coherent pair of frames: depth and color
@@ -32,6 +62,11 @@ while True:
     # Convert images to numpy arrays 把图像转换为numpy data
     depth_image = np.asanyarray(depth_frame.get_data()) #从帧中获取数据
     color_image = np.asanyarray(color_frame.get_data())
+
+    color_image = cv2.cvtColor(color_image, cv2.COLOR_BGR2HSV)
+    color_image = vibrance(color_image, 45)
+    color_image = brightenShadows(color_image, 40)
+    color_image = cv2.cvtColor(color_image, cv2.COLOR_HSV2BGR)
     
     # Apply colormap on depth image (image must be converted to 8-bit per pixel first) 在深度图上用颜色渲染
     # convertScaleAbs可以对src中每一个元素做

@@ -127,8 +127,7 @@ while True:
                 skeleton_points = Normalize_landmarks(color_image,hand_landmarks,depth_image)
                 # print(skeleton_points)
                 ellipsoid = EllipsoidTool()
-                
-                
+            
         images = np.hstack((depth_colormap, color_image))
         
         # print(len(skeleton_points))
