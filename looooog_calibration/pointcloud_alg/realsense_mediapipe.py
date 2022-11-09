@@ -65,7 +65,7 @@ class realsenseMediapipe:
             # Convert images to numpy arrays 把图像转换为numpy data
             depth_image = np.asanyarray(depth_frame.get_data()) #从帧中获取数据
             color_image = np.asanyarray(color_frame.get_data())
-            print(depth_image.shape)
+            # print(depth_image.shape)
             # Apply colormap on depth image (image must be converted to 8-bit per pixel first) 在深度图上用颜色渲染
             # convertScaleAbs可以对src中每一个元素做
             depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
@@ -98,7 +98,7 @@ class realsenseMediapipe:
                         skeleton_points = self.Normalize_landmarks(color_image,hand_landmarks)
                         
                 images = np.hstack((depth_colormap, color_image))
-                # print(skeleton_points)
+                print(skeleton_points)
                 
                 cv2.imshow('MediaPipe Hands', cv2.flip(images,1))
                 if cv2.waitKey(5) & 0xFF ==27:

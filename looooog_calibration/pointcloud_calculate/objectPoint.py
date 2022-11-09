@@ -43,8 +43,9 @@ def objectToPoint(abs_path, background_num, object_num):
     threshold_image = cv.morphologyEx(threshold_image, cv.MORPH_OPEN, kernel=element)
     # cv.imshow("after process",threshold_image)
 
-    # 5.提取结果，获取轮廓
-    binary, contours, hierarchy = cv.findContours(threshold_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+    # 5.提取结果，获取轮廓,如果是opencv版本较低的用第一条代码,opencv版本较高用第二条
+    # binary, contours, hierarchy = cv.findContours(threshold_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv.findContours(threshold_image, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     mask_list = []
     
     for contour in contours:
